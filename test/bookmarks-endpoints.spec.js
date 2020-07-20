@@ -1,5 +1,5 @@
 const knex = require('knex')
-const fixtures = require('./bookmarks-fixtures')
+const fixtures = require('./bookmark-fixtures')
 const app = require('../src/app')
 // TODO: remove when updating POST and DELETE
 const store = require('../src/store')
