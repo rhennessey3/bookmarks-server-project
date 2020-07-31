@@ -12,13 +12,14 @@ describe('Bookmarks Endpoints', () => {
         })
         app.set('db', db)
     })
-
-    after('disconnect from db', () => db.destroy())
-
+    
     before('cleanup', () => db('bookmarks').truncate())
 
     afterEach('cleanup', () => db('bookmarks').truncate())
 
+    after('disconnect from db', () => db.destroy())
+
+    
     describe(`Unauthorized requests`, () => {
         const testBookmarks = fixtures.makeBookmarksArray()
 
